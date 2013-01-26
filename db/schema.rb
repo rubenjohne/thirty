@@ -11,14 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126002229) do
+ActiveRecord::Schema.define(:version => 20130126200823) do
+
+  create_table "stories", :force => true do |t|
+    t.integer  "participant_number"
+    t.string   "image_filename"
+    t.text     "about_me"
+    t.text     "anecdote"
+    t.string   "name"
+    t.string   "company"
+    t.string   "email_address"
+    t.text     "mailing_address"
+    t.boolean  "approved"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "password"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
 
 end

@@ -12,6 +12,7 @@ end
 group :test do 
   gem 'sqlite3'
   gem 'rspec'
+  gem 'factory_girl_rails', '1.0'
 end
 
 group :development do 

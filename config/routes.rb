@@ -1,5 +1,12 @@
 Thirty::Application.routes.draw do
+  resources :stories
+
+  get "pages/home"
+
   resources :users
+  
+  root :to => "pages#home"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
