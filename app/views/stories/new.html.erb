@@ -1,0 +1,7 @@
+<%= form_for(:story, :url => stories_path) do |f| %>
+	
+	<h1>New Story</h1>
+	
+	<%= render :partial => "form", :locals => {:f => f} %>
+
+<% end %>	
