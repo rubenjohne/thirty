@@ -92,6 +92,19 @@ describe StoriesController do
       
     end
     
+    describe "GET 'show'" do
+      before(:each) do
+        @story = Factory(:story)
+      end
+      
+      it "should be successful" do
+        get :show, :id => @story
+        response.should be_success
+      end
+      
+    end
+    
+    
     describe "GET 'edit'" do
       
       before(:each) do

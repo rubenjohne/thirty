@@ -3,26 +3,32 @@
 <table>
 	<tr>
 		<th>Participant</th>
-		<th>Image</th>
+		<th>Picture</th>
+		<th>Picture with Count</th>	
+		<th>Picture Black and White</th>	
 		<th>About Me</th>
 		<th>Anecdote</th>
 		<th>Name</th>
 		<th>Company</th>
 		<th>E-Mail</th>
 		<th>Address</th>
+		<th>Featured</th>
 		<th>Approved</th>
 	</tr>	
 	
 	<% @stories.each do |story| %>
 		<tr>
 			<td><%= story.participant_number %></td>
-			<td><%= story.image_filename %></td>
+			<td><%= image_tag story.picture.url(:thumb), :title => "title", :class => "thumb" %></td>
+			<td><%= image_tag story.picture_with_count.url, :title => "title", :class => "thumb" %></td>
+			<td><%= image_tag story.black_and_white.url, :title => "title", :class => "thumb" %></td>
 			<td><%= story.about_me %></td>
 			<td><%= story.anecdote %></td>
 			<td><%= story.name %></td>
 			<td><%= story.company %></td>
 			<td><%= story.email_address %></td>
 			<td><%= story.mailing_address %></td>
+			<td><%= story.featured %></td>
 			<td><%= story.approved %></td>
 			<td><%= link_to 'Show', story_path(story) %></td>
 			<td><%= link_to 'Edit', edit_story_path(story) %></td>

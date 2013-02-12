@@ -15,4 +15,5 @@ Factory.define :story do |story|
   story.email_address           "ruben@tadashishoji.com"
   story.mailing_address         "3016 E 44th st. Vernon, CA 90058"
   story.approved                true                   
+  story.featured                false
 end   

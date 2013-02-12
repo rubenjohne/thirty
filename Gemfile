@@ -5,6 +5,10 @@ gem 'rails', '3.2.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# paperclip requirements 
+gem 'paperclip'
+gem 'aws-sdk'
+
 group :production do 
   gem 'pg'
   gem 'faker', :require => false

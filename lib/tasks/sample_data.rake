@@ -19,7 +19,8 @@ namespace :db do
       company = Faker::Company.bs
       email_address = Faker::Internet.email
       mailing_address = Faker::Address.street_address + " " + Faker::Address.city + ", " + Faker::Address.state + " " + Faker::Address.zip_code
-      approved = true 
+      approved = true
+      featured = true
       
       Story.create!(
         :participant_number => participant_number,
@@ -30,7 +31,8 @@ namespace :db do
         :company => company,
         :email_address => email_address,
         :mailing_address => mailing_address,
-        :approved => approved
+        :approved => approved,
+        :featured => featured
       )
     end  
   end

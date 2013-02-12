@@ -13,7 +13,7 @@ class StoriesController < ApplicationController
     @story = Story.new(params[:story])
     
     respond_to do |format|
-      if @story.save
+      if @story.save!
         format.html { redirect_to story_path(@story) }
       else
         format.html { render :action => :new }
@@ -33,7 +33,7 @@ class StoriesController < ApplicationController
   
   def update
     @story = Story.find(params[:id])
-    
+
     respond_to do |format|
       if @story.update_attributes(params[:story])
         format.html { redirect_to story_path(@story) }
@@ -51,5 +51,10 @@ class StoriesController < ApplicationController
       format.html { redirect_to stories_path }
     end
   end
+  
+  def show
+    @story = Story.find(params[:id])
+  end
+  
   
 end

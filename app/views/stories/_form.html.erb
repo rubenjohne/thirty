@@ -4,9 +4,17 @@
 		<td><%= f.text_field :participant_number %></td>
 	</tr>
 	<tr>
-		<th>Image:</th>
-		<td><%= f.file_field :image_filename %></td>
+		<th>Picture:</th>
+		<td><%= f.file_field :picture %></td>
 	</tr>		
+	<tr>
+		<th>Picture with count:</th>
+		<td><%= f.file_field :picture_with_count %></td>
+	</tr>	
+	<tr>
+		<th>Picture black and white:</th>
+		<td><%= f.file_field :black_and_white %></td>
+	</tr>	
 	<tr>
 		<th>About Me:</th>
 		<td><%= f.text_area :anecdote %></td>
@@ -26,6 +34,10 @@
 	<tr>
 		<th>Address:</th>
 		<td><%= f.text_area :mailing_address %></td> 
+	</tr>	
+	<tr>
+		<th>Featured:</th>
+		<td><%= f.check_box :featured %></td>
 	</tr>	
 	<tr>
 		<th>Approved:</th>
