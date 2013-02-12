@@ -13,9 +13,11 @@
 		<% end %>
 	</section>		
 	<div class="container">
+		<p>
 		<% if signed_in? %>
 			<%= link_to "Sign out", signout_path, :method => :delete, :class => 'signout_link' %>
 		<% end %>
+		</p>
 		
 		<%= yield %>
 		
