@@ -1,4 +1,4 @@
-<%= link_to "back", stories_path %>
+<%= link_to "Back", stories_path %> | <%= link_to 'New Story', new_story_path %>
 
 
 <p><%= @story.participant_number %></p>
@@ -6,7 +6,7 @@
 <p><%= image_tag @story.picture_with_count.url, :title => "title", :class => "thumb" %></p>
 <p><%= image_tag @story.black_and_white.url, :title => "title", :class => "thumb" %></p>
 <p><%= @story.about_me %></p>
-<p><%= @story.anecdote %></p>
+<p><%= @story.anecdote.html_safe %></p>
 <p><%= @story.name %></p>
 <p><%= @story.company %></p>
 <p><%= @story.email_address %></p>

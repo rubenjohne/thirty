@@ -23,7 +23,7 @@
 			<td><%= image_tag story.picture_with_count.url, :title => "title", :class => "thumb" %></td>
 			<td><%= image_tag story.black_and_white.url, :title => "title", :class => "thumb" %></td>
 			<td><%= story.about_me %></td>
-			<td><%= story.anecdote %></td>
+			<td><%= story.anecdote.html_safe %></td>
 			<td><%= story.name %></td>
 			<td><%= story.company %></td>
 			<td><%= story.email_address %></td>
