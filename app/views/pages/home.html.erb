@@ -1,2 +1,57 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<style type="text/css">
+	.stories {
+		width:625px;
+	}	
+	
+	ol, ul {
+		list-style: none;
+	}
+	
+	.stories ul {
+		margin: 10px 0;
+		float: left;
+	}
+	
+	.stories ul .grid-story {
+		float: left;
+		margin: 5px;
+		width: 115px;
+	}
+</style>
+
+
+<div class="stories">
+	<% @stories.each_with_index do |story, index = 1| %>
+		<% true_index = index + 1 %>
+		
+		<% if true_index == 1%>
+			<ul>
+				<li class="grid-story">
+					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115"), "#" %>
+					<p><%= story.name %></p>
+					<p><%= story.company %></p>
+				</li>
+		<% elsif true_index == @stories.size %>
+				<li class="grid-story">
+					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115"), "#" %>
+					<p><%= story.name %></p>
+					<p><%= story.company %></p>
+				</li>
+			</ul>
+		<% elsif (true_index % 5) == 0 %>	
+				<li class="grid-story">
+					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115"), "#" %>
+					<p><%= story.name %></p>
+					<p><%= story.company %></p>
+				</li>
+			</ul>
+			<ul>
+		<% else %>		
+				<li class="grid-story">
+					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115"), "#" %>
+					<p><%= story.name %></p>
+					<p><%= story.company %></p>
+				</li>
+		<% end %>		
+	<% end %>
+</div>	

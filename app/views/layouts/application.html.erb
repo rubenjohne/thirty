@@ -2,29 +2,23 @@
 <html>
 <head>
   <title>Thirty</title>
+  <%= stylesheet_link_tag    "reset", :media => "all" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= render 'layouts/header' %>	
 	<section id="flash">
 		<% flash.each do |key, value| %>
 			<div class="flash <%= key %>"><%= value %></div>
 		<% end %>
 	</section>		
 	<div class="container">
-		<p>
-		<% if signed_in? %>
-			<%= link_to "Sign out", signout_path, :method => :delete, :class => 'signout_link' %>
-			<br/>
-			<%= link_to "Stories", stories_path %>
-		<% end %>
-		</p>
 		
 		<%= yield %>
 		
 	</div>	
-	<!--- debug section information -->
 	<%= debug(params) if Rails.env.development? %>
 </body>
 </html>
