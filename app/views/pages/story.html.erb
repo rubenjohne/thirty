@@ -12,7 +12,17 @@
 	
 	#story-view-details {
 		float:right;
-		width:385px;
+		width:365px;
+		padding:10px;
+	}
+	
+	.story-view-name {
+		text-transform:uppercase;
+		margin-bottom:20px;
+	}
+	
+	.story-view-story {
+		
 	}
 	
 </style>
@@ -23,7 +33,7 @@
 		<%= image_tag @story.picture.url(:regular), :title => "#{@story.name}", :class => "story_image" %>
 	</div>	
 	<div id="story-view-details">
-		<span class="story-view-name"><%= @story.name %></span>
+		<h1 class="story-view-name"><%= @story.name %></h1>
 		<span class="story-view-story"><%= @story.anecdote.html_safe %></span>
 	</div>	
 </div>
