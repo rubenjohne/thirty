@@ -28,7 +28,7 @@
 			<ul>
 				<li class="grid-story">
 					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115", 
-						:hover_image => story.picture_with_count.url,  :actual_image => story.picture.url(:thumb),
+						:hover_image => story.picture.url(:thumb),  :actual_image => story.picture_with_count.url,
 						:onMouseOver => "$(this).attr('src', $(this).attr('hover_image'))",
 						:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))"),
 						 "#" %>
@@ -37,14 +37,22 @@
 				</li>
 		<% elsif true_index == @stories.size %>
 				<li class="grid-story">
-					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115"), "#" %>
+					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115", 
+						:hover_image => story.picture.url(:thumb),  :actual_image => story.picture_with_count.url,
+						:onMouseOver => "$(this).attr('src', $(this).attr('hover_image'))",
+						:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))"),
+						 "#" %>
 					<p><%= story.name %></p>
 					<p><%= story.company %></p>
 				</li>
 			</ul>
 		<% elsif (true_index % 5) == 0 %>	
 				<li class="grid-story">
-					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115"), "#" %>
+					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115", 
+						:hover_image => story.picture.url(:thumb),  :actual_image => story.picture_with_count.url,
+						:onMouseOver => "$(this).attr('src', $(this).attr('hover_image'))",
+						:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))"),
+						 "#" %>
 					<p><%= story.name %></p>
 					<p><%= story.company %></p>
 				</li>
@@ -52,7 +60,11 @@
 			<ul>
 		<% else %>		
 				<li class="grid-story">
-					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115"), "#" %>
+					<%= link_to image_tag(story.picture.url(:thumb), :title => "title", :class => "grid-image", :size => "115x115", 
+						:hover_image => story.picture.url(:thumb),  :actual_image => story.picture_with_count.url,
+						:onMouseOver => "$(this).attr('src', $(this).attr('hover_image'))",
+						:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))"),
+						 "#" %>
 					<p><%= story.name %></p>
 					<p><%= story.company %></p>
 				</li>
