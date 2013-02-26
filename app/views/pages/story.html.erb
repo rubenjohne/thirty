@@ -1,3 +1,30 @@
+<style type="text/css">
+	
+	#story-view {
+		width:625px;
+		margin: 40px 0;
+	}
+	
+	#story-view-image {
+		float:left;
+		width:240px;
+	}
+	
+	#story-view-details {
+		float:right;
+		width:385px;
+	}
+	
+</style>
 
-<%= image_tag @story.picture.url(:regular), :title => "#{@story.name}", :class => "story_image" %>
+
+<div id="story-view">
+	<div id="story-view-image">
+		<%= image_tag @story.picture.url(:regular), :title => "#{@story.name}", :class => "story_image" %>
+	</div>	
+	<div id="story-view-details">
+		<span class="story-view-name"><%= @story.name %></span>
+		<span class="story-view-story"><%= @story.anecdote.html_safe %></span>
+	</div>	
+</div>
 
