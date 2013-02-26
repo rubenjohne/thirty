@@ -19,6 +19,13 @@
 	}
 </style>
 
+<!--- preload images with javascript -->
+<script type="text/javascript">
+	<%= @stories.each do |story| %>
+		var preloadImage = new Image();
+		preloadImage.src = <%= story.picture.url(:thumb) %>;
+	<% end %>
+</script>
 
 <div class="stories">
 	<% @stories.each_with_index do |story, index = 1| %>
