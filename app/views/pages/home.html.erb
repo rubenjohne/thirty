@@ -17,15 +17,17 @@
 		margin: 5px;
 		width: 115px;
 	}
+	
+	.preload {
+		display:none;
+	}
+	
 </style>
 
 <!--- preload images with javascript -->
-<script type="text/javascript">
-	<%= @stories.each do |story| %>
-		var preloadImage = new Image();
-		preloadImage.src = <%= story.picture.url(:thumb) %>;
-	<% end %>
-</script>
+<% @stories.each do |story| %>
+	<%= image_tag story.picture.url(:thumb),  :class => "preload" %>
+<% end %>
 
 <div class="stories">
 	<% @stories.each_with_index do |story, index = 1| %>
