@@ -11,7 +11,6 @@ class PagesController < ApplicationController
   
   def story
     @story = Story.find(params[:id])
-    
   end
   
 end
