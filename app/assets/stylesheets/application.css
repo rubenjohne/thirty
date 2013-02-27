@@ -35,6 +35,13 @@ a {
 	margin:0 auto;
 }
 
+#main {
+	width:625px;
+}
+
+#social-feed {
+	width:335px;
+}
 
 .debug_dump {
 	display:block;

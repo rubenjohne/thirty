@@ -1,3 +1,27 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.stories {
+	width:100%;
+}	
+
+ol, ul {
+	list-style: none;
+}
+
+.stories ul {
+	margin: 10px 0;
+	float: left;
+}
+
+.stories ul .grid-story {
+	float: left;
+	margin: 5px;
+	width: 115px;
+}
+
+.preload {
+	display:none;
+}
