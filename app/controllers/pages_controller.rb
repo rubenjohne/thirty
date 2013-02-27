@@ -2,6 +2,8 @@ class PagesController < ApplicationController
 
   def home
     @stories = Story.featured
+    # active stories for preloading images
+    @active_stories = Story.active
   end
   
   def submit
