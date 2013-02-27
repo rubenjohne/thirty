@@ -3,6 +3,7 @@ class Story < ActiveRecord::Base
   attr_accessible :picture, :picture_with_count, :black_and_white
   
   scope :featured, where(:featured => true).order('participant_number ASC')
+  scope :submitted, where(:featured => false)
   scope :active, where(:active => true)
   
   has_attached_file :picture, styles: {
