@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211232330) do
+ActiveRecord::Schema.define(:version => 20130227012447) do
 
   create_table "stories", :force => true do |t|
     t.integer  "participant_number"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20130211232330) do
     t.integer  "black_and_white_file_size"
     t.datetime "black_and_white_updated_at"
     t.boolean  "featured"
+    t.boolean  "active"
   end
 
   create_table "users", :force => true do |t|

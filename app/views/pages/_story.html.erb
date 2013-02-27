@@ -1,0 +1,11 @@
+<% unless story.active? %>
+	<%= image_tag story.black_and_white.url, :title => "#{story.name}",  :size => "115x115", :class => "grid-image" %>
+<% else %>
+	<%= link_to image_tag(story.picture_with_count.url, :title => "#{story.name}", :class => "grid-image", :size => "115x115", 
+		:hover_image => story.picture.url(:thumb),  :actual_image => story.picture_with_count.url,
+		:onMouseOver => "$(this).attr('src', $(this).attr('hover_image'))",
+		:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))"),
+		:controller => "pages", :action => "story", :id => story.id  %>
+<% end %>
+<p><%= story.name %></p>
+<p><%= story.company %></p>
