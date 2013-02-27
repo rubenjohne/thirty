@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   
   def story
     @story = Story.find(params[:id])
+    unless @story.active? 
+      redirect_to :action => :home
+    end
   end
   
 end
