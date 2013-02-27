@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    @stories = Story.all
+    @stories = Story.featured
   end
   
   def submit
