@@ -5,22 +5,24 @@
 
 .stories {
 	width:100%;
+	
+	ul {
+		margin: 10px 0;
+		float: left;
+		
+		.grid-story {
+			float: left;
+			margin: 5px;
+			width: 115px;
+		}
+		
+	}
 }	
 
 ol, ul {
 	list-style: none;
 }
 
-.stories ul {
-	margin: 10px 0;
-	float: left;
-}
-
-.stories ul .grid-story {
-	float: left;
-	margin: 5px;
-	width: 115px;
-}
 
 .preload {
 	display:none;
