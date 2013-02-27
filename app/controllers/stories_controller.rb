@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
   before_filter :authenticate 
+  layout 'admin'
   
   def index
     @stories = Story.all

@@ -14,6 +14,7 @@
 		<th>Address</th>
 		<th>Featured</th>
 		<th>Approved</th>
+		<th>Active</th>
 	</tr>	
 	
 	<% @stories.each do |story| %>
@@ -30,6 +31,7 @@
 			<td><%= story.mailing_address %></td>
 			<td><%= story.featured %></td>
 			<td><%= story.approved %></td>
+			<td><%= story.active %></td>
 			<td><%= link_to 'Show', story_path(story) %></td>
 			<td><%= link_to 'Edit', edit_story_path(story) %></td>
 			<td><%= button_to 'Destroy', story_path(story), :data => { :confirm => 'Are you sure?' }, :method => :delete  %></td>
