@@ -10,15 +10,7 @@ class PagesController < ApplicationController
   
   
   def story
-    @story = Story.find_by_participant_number(params[:participant_number])
-    
-    if @story.nil? 
-      redirect_to :action => :home      
-    end
-    
-    unless  @story.active?  
-      redirect_to :action => :home
-    end
+    @story = Story.find(params[:id])
     
   end
   
