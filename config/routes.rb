@@ -11,7 +11,7 @@ Thirty::Application.routes.draw do
   
   get 'pages/home'
   get 'pages/submit'
-  match 'pages/story/:id' => "pages#story"
+  match 'pages/story/:particpant_number' => "pages#story"
   
   match '/signin',  :to =>  'sessions#new'
   match '/signout', :to =>  'sessions#destroy'
