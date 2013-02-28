@@ -7,13 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'layouts/header' %>	
+	<%= render 'layouts/header' %>
 	<section id="flash">
 		<% flash.each do |key, value| %>
 			<div class="flash <%= key %>"><%= value %></div>
 		<% end %>
 	</section>		
 	<div class="container">
+		<%= render 'layouts/logo' %>				
 		<%= render 'layouts/navigation' %>	
 		<div id="main">		
 			<%= yield %>
