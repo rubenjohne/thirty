@@ -45,6 +45,12 @@ class StoriesController < ApplicationController
     
   end
   
+  
+  def for_approval
+    @stories = Story.needs_approval
+    render :action => "index"
+  end
+  
   def destroy
     @story = Story.find(params[:id])
     @story.destroy

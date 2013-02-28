@@ -16,6 +16,7 @@ Thirty::Application.routes.draw do
   get 'pages/submitted'
   match 'pages/story/:id' => "pages#story"
   
+  match '/for_approval', :to => "stories#for_approval"
   match '/signin',  :to =>  'sessions#new'
   match '/signout', :to =>  'sessions#destroy'
 

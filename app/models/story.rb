@@ -7,6 +7,7 @@ class Story < ActiveRecord::Base
   
   scope :featured, where(:featured => true).order('participant_number ASC')
   scope :submitted, where(:featured => false, :approved => true)
+  scope :needs_approval, where(:featured => false, :approved => false)
   scope :active, where(:active => true)
   
   has_attached_file :picture, styles: {

@@ -1,7 +1,28 @@
+<style type="text/css">
+	header {
+		height:80px;
+	}
+	ul.admin-links {
+		float:left;
+	}
+	
+	ul.admin-links, li {
+		list-style:none;
+	}
+	
+	ul.admin-links  li {
+		float:left;
+		padding:10px;
+		display:block;
+	}
+</style>
+
 <header>
 	<% if signed_in? %>
-		<%= link_to "Sign out", signout_path, :method => :delete, :class => 'signout_link' %>
-		<br/>
-		<%= link_to "Stories", stories_path %>
+		<ul class="admin-links">
+			<li><%= link_to "Sign out", signout_path, :method => :delete, :class => 'signout_link' %><l/i>
+			<li><%= link_to "Stories", stories_path %><l/i>
+			<li><%= link_to "Needs Approval", for_approval_path %><l/i>
+		</ul>
 	<% end %>	
 </header>	
