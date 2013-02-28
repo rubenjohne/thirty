@@ -13,6 +13,7 @@ Thirty::Application.routes.draw do
   get 'pages/submit'
   get 'pages/thanks'
   post 'pages/create'
+  get 'pages/submitted'
   match 'pages/story/:id' => "pages#story"
   
   match '/signin',  :to =>  'sessions#new'

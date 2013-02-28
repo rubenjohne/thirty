@@ -6,7 +6,7 @@ class Story < ActiveRecord::Base
   
   
   scope :featured, where(:featured => true).order('participant_number ASC')
-  scope :submitted, where(:featured => false)
+  scope :submitted, where(:featured => nil)
   scope :active, where(:active => true)
   
   has_attached_file :picture, styles: {

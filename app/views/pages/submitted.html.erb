@@ -1,9 +1,4 @@
 
-<!--- preload images with javascript -->
-<% @active_stories.each do |story| %>
-	<%= image_tag story.picture.url(:thumb),  :class => "preload" %>
-<% end %>
-
 <div class="stories">
 	<% @stories.each_with_index do |story, index = 1| %>
 		<% true_index = index + 1 %>
@@ -11,24 +6,23 @@
 		<% if true_index == 1%>
 			<ul>
 				<li class="grid-story">
-					<%= render :partial => 'story', :locals => {:story => story} %>
+					<%= render :partial => 'submitted_story', :locals => {:story => story} %>
 				</li>
 		<% elsif true_index == @stories.size %>
 				<li class="grid-story">
-					<%= render :partial => 'story', :locals => {:story => story} %>
+					<%= render :partial => 'submitted_story', :locals => {:story => story} %>
 				</li>
 			</ul>
 		<% elsif (true_index % 5) == 0 %>	
 				<li class="grid-story">
-					<%= render :partial => 'story', :locals => {:story => story} %>
+					<%= render :partial => 'submitted_story', :locals => {:story => story} %>
 				</li>
 			</ul>
 			<ul>
 		<% else %>		
 				<li class="grid-story">
-					<%= render :partial => 'story', :locals => {:story => story} %>
+					<%= render :partial => 'submitted_story', :locals => {:story => story} %>
 				</li>
 		<% end %>		
 	<% end %>
 </div>	
-

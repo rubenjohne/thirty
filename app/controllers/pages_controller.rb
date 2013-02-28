@@ -10,6 +10,9 @@ class PagesController < ApplicationController
     @story = Story.new
   end
   
+  def submitted
+    @stories = Story.submitted
+  end
   
   def story
     @story = Story.find(params[:id])
