@@ -1,9 +1,14 @@
 
 <table>
-	<tr>
+	<tr class="double">
 		<th>DISPLAY NAME (to publish with story)</th>
-		<td><%= f.text_field :name, :class => "text_field" %></td>
+		<th>UPLOAD A PHOTO</th>
 	</tr>	
+	<tr class="double">
+		<td><%= f.text_field :name, :class => "text_field" %></td>
+		<td><%= f.file_field :picture %></td>
+	</tr>	
+	<tr class="spacer"></tr>	
 	<tr class="tight">
 		<th colspan="2">I AM...</th>
 	</tr>	
@@ -19,7 +24,76 @@
 	<tr>
 		<td colspan="2"><%= f.text_area :anecdote %></td> 
 	</tr>	
-	<tr>
-		<td colspan="2"><%= submit_tag "Submit Story"%></td>
-	</tr>	
 </table>
+
+
+
+<div id="customer-info">
+	<table id="table-customer-info">
+		<tr>
+			<th colspan="2">FIRST NAME *</th>
+		</tr>	
+		<tr>
+			<td colspan="2"><%= f.text_field :first_name, :class => "text_field" %></td>
+		</tr>	
+		<tr class="spacer"></tr>	
+		<tr>
+			<th colspan="2">LAST NAME *</th>
+		</tr>	
+		<tr>
+			<td colspan="2"><%= f.text_field :last_name, :class => "text_field" %></td>
+		</tr>	
+		<tr class="spacer"></tr>	
+		<tr class="spacer"></tr>	
+		<tr>
+			<th colspan="2">EMAIL ADDRESS *</th>
+		</tr>	
+		<tr>
+			<td colspan="2"><%= f.text_field :email_address, :class => "text_field" %></td>
+		</tr>		
+		<tr id="customer-subscribe">
+			<td class="notes">* Required Fields	</td> 
+			<td><span class="notes-subscribe">SUBSCRIBE TO EMAIL:</span><%= f.check_box :subscribe %></td>
+		</tr>	
+		<tr class="spacer"></tr>	
+		<tr>
+			<td></td>
+			<td><%= link_to "PRIVACY POLICY", "#" %></td>
+		</tr>	
+	</table>	
+</div>	
+
+
+<div id="mailing-address">
+	<table id="table-mailing-address">
+		<tr colspan="2">
+			<th>STREET ADDRESS</th>
+		</tr>	
+		<tr>
+			<td colspan="2"><%= f.text_field :street_address, :class => "text_field" %></td>
+		</tr>		
+		<tr class="spacer"></tr>	
+		<tr>
+			<td>CITY</td>
+			<td>STATE</td>
+		</tr>	
+		<tr>
+			<td><%= f.text_field :city, :class => "text_field" %></td>
+			<td><%= f.text_field :state, :class => "text_field" %></td>			
+		</tr>	
+		<tr class="spacer"></tr>	
+		<tr>
+			<td>ZIP CODE</td>
+			<td></td>			
+		</tr>	
+		<tr>
+			<td><%= f.text_field :zip, :class => "text_field" %></td>
+			<td></td>			
+		</tr>	
+		<tr class="spacer"></tr>	
+		<tr>
+			<td></td>
+			<td><%= submit_tag "Submit Story"%></td>
+		</tr>	
+	</table>	
+</div>	
