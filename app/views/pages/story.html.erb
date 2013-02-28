@@ -3,6 +3,7 @@
 	#story-view {
 		width:625px;
 		margin: 40px 0;
+		overflow:hidden;
 	}
 	
 	#story-view-image {
@@ -26,7 +27,10 @@
 	}
 	
 	.story-view-buttons {
+		width:365px;
 		margin:10px 0;
+		padding:10px;
+		overflow:hidden	;
 	}
 	
 	.back-to-link {
@@ -39,6 +43,10 @@
 		display:block;
 	}
 	
+	#fb-comments {
+		margin-top:20px;
+	}
+	
 </style>
 
 
@@ -48,7 +56,7 @@
 	</div>	
 	<div id="story-view-details">
 		<h1 class="story-view-name"><%= @story.name %></h1>
-		<span class="story-view-story"><%= @story.anecdote.html_safe %></span>
+		<div class="story-view-story"><%= @story.anecdote.html_safe %></div>
 	</div>	
 	<div class="story-view-buttons">
 		<%= link_to "BACK TO STORIES", root_path, :class => "back-to-link" %>
