@@ -46,7 +46,7 @@
 	<h4 class="sub-title">GOT SOMETHIN' TO SAY? WELL THEN SAY IT! SUBMIT YOUR<br/> STORY TO BE FEATURED ON OUR WEBSITE YO!</h4>
 
 
-	<%= form_for(:story, :url => stories_path) do |f| %>
+	<%= form_for(:story, :url => pages_create_path) do |f| %>
 	
 	
 		<%= render :partial => "form", :locals => {:f => f} %>
