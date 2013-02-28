@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130228020554) do
+ActiveRecord::Schema.define(:version => 20130228032728) do
 
   create_table "stories", :force => true do |t|
     t.integer  "participant_number"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20130228020554) do
     t.string   "company"
     t.string   "email_address"
     t.text     "mailing_address"
-    t.boolean  "approved"
+    t.boolean  "approved",                        :default => false
     t.datetime "created_at",                                         :null => false
     t.datetime "updated_at",                                         :null => false
     t.string   "picture_file_name"
