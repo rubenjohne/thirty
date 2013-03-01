@@ -1,30 +1,79 @@
+<style type="text/css">
+
+	div.slideshow {
+		position:relative;
+		width:625px;
+	}
+	
+	div.slideshow a {
+		text-indent:-9999px;
+	}
+	
+	.carousel-image {
+	}
+	
+	#prev, #next {
+		display:block;
+		position:absolute;
+		top:30px;
+		z-index:3;
+		opacity:0.4;
+		height:50px;
+		width:25px;
+	}
+	
+	#prev:hover, #next:hover {
+		opacity:1;
+	}
+
+	#prev {
+		background: url("/assets/prevImgBtn.png") no-repeat scroll center center transparent;
+	}
+	
+	#next {
+		background: url("/assets/nextImgBtn.png") no-repeat scroll center center transparent;
+		right:0;
+	}
+	
+	#pager {
+		
+	}
+</style>
+
+
+
+
+
+
+
 <%= javascript_include_tag "jquery.cycle2.carousel.min" %>
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 
 <!--- begin slideshow menu -->
 
 <div class="slideshow" 
-    data-cycle-fx=carousel
-    data-cycle-timeout=0
-    data-cycle-carousel-visible=5
+    data-cycle-fx="carousel"
+    data-cycle-timeout="0"
+    data-cycle-carousel-visible="5"
     data-cycle-next="#next"
-    data-cycle-prev="#prev"
-    data-cycle-pager="#pager"
-    >
-    <img src="http://malsup.github.com/images/beach1.jpg">
-    <img src="http://malsup.github.com/images/beach2.jpg">
-    <img src="http://malsup.github.com/images/beach3.jpg">
-    <img src="http://malsup.github.com/images/beach4.jpg">
-    <img src="http://malsup.github.com/images/beach5.jpg">
-    <img src="http://malsup.github.com/images/beach6.jpg">
-    <img src="http://malsup.github.com/images/beach7.jpg">
-    <img src="http://malsup.github.com/images/beach8.jpg">
-    <img src="http://malsup.github.com/images/beach9.jpg">
+    data-cycle-prev="#prev">
+
+    <a href="#" id="prev">prev</a>
+    <a href="#" id="next">next</a>
+
+	<% @stories.each do |story| %>
+		<% unless story.active? %>
+			<%= image_tag story.black_and_white.url, :title => "#{story.name}",  :size => "115x115", :class => "carousel-image" %>
+		<% else %>
+			<%= image_tag(story.picture_with_count.url, :title => "#{story.name}", :class => "carousel-image", :size => "115x115", 
+				:hover_image => story.picture.url(:thumb),  :actual_image => story.picture_with_count.url,
+				:onMouseOver => "$(this).attr('src', $(this).attr('hover_image'))",
+				:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))") %>
+		<% end %>
+	<% end %>
+	
+	
 </div>
 
-<div class=center>
-    <a href=# id=prev>&lt;&lt; Prev </a>
-    <a href=# id=next> Next &gt;&gt; </a>
-</div>
 
-<div class="cycle-pager" id=pager></div>
+<!--- end slideshow menu -->
