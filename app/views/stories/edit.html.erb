@@ -4,3 +4,8 @@
 	<%= render :partial => "form", :locals => { :f => f}%>			
 
 <% end %>				
+
+
+<h1>Original Pic</h1>
+<%= image_tag @story.picture.url, :title => "Original Pic" %>
+

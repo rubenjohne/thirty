@@ -12,3 +12,7 @@
 <p><%= @story.email_address %></p>
 <p><%= @story.mailing_address %></p>
 <p><%= @story.approved %></p>
+<h1>Original Pic</h1>
+<%= image_tag @story.picture.url, :title => "Original Pic" %>
+
+
