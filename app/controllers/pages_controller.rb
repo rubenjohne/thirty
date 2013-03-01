@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   
   def story
     @stories = Story.featured
+    @active_stories = Story.active    
     @story = Story.find(params[:id])
   end
   

@@ -52,6 +52,9 @@
 	}
 </style>
 
+<%= render :partial => 'preload_active_stories', :locals => {:active_stories => @active_stories } %>
+
+
 <%= render :partial => 'carousel_story', :locals => {:stories => @stories} %>
 
 
