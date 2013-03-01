@@ -15,6 +15,7 @@ class PagesController < ApplicationController
   end
   
   def story
+    @stories = Story.featured
     @story = Story.find(params[:id])
   end
   
