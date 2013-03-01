@@ -13,6 +13,10 @@
 		margin:5px;
 	}
 	
+	img.active {
+		cursor:pointer;
+	}
+	
 	#prev, #next {
 		display:block;
 		position:absolute;
@@ -29,12 +33,12 @@
 
 	#prev {
 		background: url("/assets/prevImgBtn.png") no-repeat scroll center center transparent;
-		left:5px;
+		left:8px;
 	}
 	
 	#next {
 		background: url("/assets/nextImgBtn.png") no-repeat scroll center center transparent;
-		right:5px;
+		right:8px;
 	}
 	
 	#pager {
@@ -67,10 +71,10 @@
 		<% unless story.active? %>
 			<%= image_tag story.black_and_white.url, :title => "#{story.name}",  :size => "115x115", :class => "carousel-image" %>
 		<% else %>
-			<%= image_tag(story.picture_with_count.url, :title => "#{story.name}", :class => "carousel-image", :size => "115x115", 
+			<%= image_tag(story.picture_with_count.url, :title => "#{story.name}", :class => "carousel-image active", :size => "115x115", 
 				:hover_image => story.picture.url(:thumb),  :actual_image => story.picture_with_count.url,
 				:onMouseOver => "$(this).attr('src', $(this).attr('hover_image'))",
-				:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))") %>
+				:onMouseOut => "$(this).attr('src',$(this).attr('actual_image'))", :onClick => "window.location = '/pages/story/#{story.id}'") %>
 		<% end %>
 	<% end %>
 	
