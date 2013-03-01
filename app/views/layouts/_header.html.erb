@@ -21,6 +21,7 @@
 	<% if signed_in? %>
 		<ul class="admin-links">
 			<li><%= link_to "Sign out", signout_path, :method => :delete, :class => 'signout_link' %><l/i>
+			<li><%= link_to "Home", root_path  %><l/i>				
 			<li><%= link_to "Stories", stories_path %><l/i>
 			<li><%= link_to "Needs Approval", for_approval_path %><l/i>
 		</ul>
