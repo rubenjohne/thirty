@@ -44,10 +44,12 @@ a:hover {
 #main {
 	width:625px;
 	border-top:1px dotted #777777;
+	float:left;
 }
 
 #social-feed {
 	width:335px;
+	float:right;
 }
 
 .debug_dump {
