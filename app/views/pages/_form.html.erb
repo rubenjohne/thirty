@@ -57,20 +57,21 @@
 
 <div id="mailing-address">
 	<table id="table-mailing-address">
-		<tr colspan="2">
-			<th>STREET ADDRESS</th>
+		<tr>
+			<th colspan="2">STREET ADDRESS</th>
 		</tr>	
 		<tr>
 			<td colspan="2"><%= f.text_field :street_address, :class => "text_field" %></td>
 		</tr>		
 		<tr class="spacer"></tr>	
 		<tr>
-			<td>CITY</td>
-			<td>STATE</td>
+			<td>CITY<span class="state">STATE</span></td>
 		</tr>	
-		<tr>
-			<td><%= f.text_field :city, :class => "text_field" %></td>
-			<td><%= f.text_field :state, :class => "text_field" %></td>			
+		<tr class="city-state">
+			<td>
+				<%= f.text_field :city, :class => "city_text_field" %>
+				<%= f.text_field :state, :class => "state_text_field" %>
+			</td>			
 		</tr>	
 		<tr class="spacer"></tr>	
 		<tr>
@@ -78,13 +79,12 @@
 			<td></td>			
 		</tr>	
 		<tr>
-			<td><%= f.text_field :zip, :class => "text_field" %></td>
+			<td><%= f.text_field :zip, :class => "zip_text_field" %></td>
 			<td></td>			
 		</tr>	
 		<tr class="spacer"></tr>	
-		<tr>
-			<td></td>
-			<td><%= submit_tag "Submit Story"%></td>
+		<tr class="submit-tr">
+			<td><%= submit_tag "Submit Story", :class => "submit_story_button"%></td>
 		</tr>	
 	</table>	
 </div>	
