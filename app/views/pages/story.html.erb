@@ -59,7 +59,7 @@
 	</div>	
 	<div id="story-view-details">
 		<h1 class="story-view-name"><%= @story.name %></h1>
-		<div class="story-view-story"><%= @story.about_me.html_safe %></div>
+		<div class="story-view-about"><%= @story.about_me.html_safe %></div>
 		<div class="story-view-story"><%= @story.anecdote.html_safe %></div>
 		<!--- Add this social buttons -->
 		<%= render :partial => '_add_this_buttons', :locals => {:story => @story} %>
