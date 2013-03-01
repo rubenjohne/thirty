@@ -151,8 +151,9 @@
 
 
 	<%= form_for(:story, :url => pages_create_path) do |f| %>
-	
-	
+		
+		<%= render 'shared/error_messages' %>
+		
 		<%= render :partial => "form", :locals => {:f => f} %>
 
 	<% end %>

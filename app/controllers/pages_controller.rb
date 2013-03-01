@@ -23,10 +23,11 @@ class PagesController < ApplicationController
     @story = Story.new(params[:story])
     
     respond_to do |format|
-      if @story.save!
+      if @story.save
         format.html { redirect_to pages_thanks_path }
       else
-        format.html { render :action => :story }
+        @title = "Submit Your Story"
+        format.html { render :action => :submit }
       end
       
     end      

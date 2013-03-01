@@ -19,4 +19,15 @@ class Story < ActiveRecord::Base
   has_attached_file :black_and_white 
   
   
+  # validations
+  
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  
+  validates :name, :presence => true
+  validates :picture, :presence => true
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
+  validates :email_address, :presence => true,
+            :format => { :with => email_regex }
+  
 end
