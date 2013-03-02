@@ -26,8 +26,8 @@ class PagesController < ApplicationController
     
     respond_to do |format|
       if @story.save
-        # FIX for later to send email
-        # UserMailer.thank_you(@story).deliver        
+        #FIX for later to send email
+        UserMailer.thank_you(@story).deliver        
         format.html { redirect_to pages_thanks_path }
       else
         @title = "Submit Your Story"

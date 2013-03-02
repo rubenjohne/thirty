@@ -78,11 +78,11 @@ Thirty::Application.configure do
   # Action Mailer configs
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
+    :address              => "smtp10.exchangecenral.net",
+    :port                 => 557,
     :domain               => 'tadashishoji.com',
-    :user_name            => 'rubenjohne',
-    :password             => 'rBeatriz21',
+    :user_name            => 'shop',
+    :password             => 'Tadaerce19',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
   
