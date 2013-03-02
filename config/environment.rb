@@ -8,7 +8,7 @@ Thirty::Application.initialize!
  # Action Mailer configs
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-:address => "localhost", # instead of "smtp.yourdomain.com",
+:address => "smtp10.exchangecentral.net", # instead of "smtp.yourdomain.com",
 :port => 587,
 :domain => "UC2",
 :authentication => :login,
