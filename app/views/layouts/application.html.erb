@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Thirty</title>
+  <title>30 for 30 Tadashi Shoji</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "jquery-1.8.1.min" %>
@@ -16,9 +16,9 @@
 		<% end %>
 	</section>		
 	<div class="container">
-		<%= render 'layouts/logo' %>				
-		<%= render 'layouts/navigation' %>	
 		<div id="main">		
+			<%= render 'layouts/logo' %>				
+			<%= render 'layouts/navigation' %>	
 			<%= yield %>
 		</div>
 		<div id="social-feed">
