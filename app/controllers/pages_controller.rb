@@ -43,7 +43,7 @@ class PagesController < ApplicationController
   end
   
   def testemail
-    UserMailer.testemail
+    UserMailer.test
   end
   
 end
