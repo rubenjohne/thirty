@@ -11,4 +11,8 @@ class UserMailer < ActionMailer::Base
     @story = story
     mail(:to => story.email_address, :subject => "Thank you for submitting your story")
   end
+  
+  def test
+    mail(:to => "rubenjohne@mgmail.com", :subject => "This is a test email")
+  end
 end

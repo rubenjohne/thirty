@@ -42,4 +42,8 @@ class PagesController < ApplicationController
     
   end
   
+  def testemail
+    UserMailer.testemail
+  end
+  
 end

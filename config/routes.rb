@@ -14,6 +14,8 @@ Thirty::Application.routes.draw do
   get 'pages/thanks'
   post 'pages/create'
   get 'pages/submitted'
+  get 'pages/testemail'
+  get 'pages/thanks'
   match 'pages/story/:id' => "pages#story"
   
   match '/for_approval', :to => "stories#for_approval"
