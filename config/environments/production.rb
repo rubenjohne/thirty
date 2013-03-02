@@ -80,10 +80,8 @@ Thirty::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp10.exchangecenral.net",
     :port                 => 587,
-    :domain               => 'tadashishoji.com',
-    :user_name            => 'shop',
-    :password             => 'Tadaerce19',
-    :authentication       => 'plain',
-    :enable_starttls_auto => true  }
+    :user_name            => 'shop@tadashishoji.com',
+    :password             => 'Tadaerce19'
+ }
   
 end
