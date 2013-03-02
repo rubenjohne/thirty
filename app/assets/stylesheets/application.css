@@ -50,6 +50,7 @@ body {
 #main {
 	width:625px;
 	float:left;
+	margin:50px 0 50px 75px;
 }
 
 #social-feed {
