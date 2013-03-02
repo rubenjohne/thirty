@@ -75,13 +75,6 @@ Thirty::Application.configure do
     }
   }
   
-  # Action Mailer configs
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address              => "smtp10.exchangecenral.net",
-    :port                 => 587,
-    :user_name            => 'shop@tadashishoji.com',
-    :password             => 'Tadaerce19'
- }
+
   
 end
