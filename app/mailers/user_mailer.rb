@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "rubenjohne@gmail.com"
+  default from: "shop@tadashishoji.com"
   
   
   def welcome_email(story)
