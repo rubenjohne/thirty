@@ -28,7 +28,6 @@ class Story < ActiveRecord::Base
   validates :first_name, :presence => true
   validates :last_name, :presence => true
   validates :anecdote, :presence => true
-  validates :email_address, :presence => true,
-            :format => { :with => email_regex }
+  validates :email_address, :format => { :with => email_regex }
   
 end

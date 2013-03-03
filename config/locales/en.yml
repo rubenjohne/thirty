@@ -2,4 +2,29 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      story:
+        name: "Display Name"
+        picture: "Photo"
+        anecdote: "Your Story"
+        first_name: "First Name"
+        last_name: "Last Name"
+        email_address: "Valid Email Address"
+    errors:
+      models:
+        story:
+          attributes:
+            name:
+              blank: " "
+            picture:
+              blank: " "      
+            anecdote:
+              blank: " "
+            first_name:
+              blank: " "      
+            last_name:
+              blank: " "   
+            email_address:     
+              blank: " "
+              invalid: " "

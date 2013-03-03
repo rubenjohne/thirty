@@ -9,7 +9,7 @@
 	color: #fff;
 	}
 	#error_explanation {
-	width: 400px;
+	width: 625px;
 	border: 2px solid red;
 	padding: 7px;
 	padding-bottom: 12px;
@@ -33,17 +33,20 @@
 	}
 	#error_explanation ul li {
 	font-size: 12px;
-	list-style: square;
+	list-style: disc;
+	text-align:left;
 	}	
+	#error_list {
+		padding:10px 0 0 10px;
+	}
 </style>
 
 
 
 <% if @story.errors.any? %>
 	<div id="error_explanation">
-		<h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
-		<p>There were problems with the following fields:</p>
-		<ul>
+		<h2>Please provide the following information to submit your story:</h2>
+		<ul id="error_list">
 		<% @story.errors.full_messages.each do |msg| %>
 			<li><%= msg %></li>
 		<% end %>
