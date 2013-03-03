@@ -1,5 +1,120 @@
-<nav id="nav">
-	<li><%= link_to "FEATURED STORIES", root_path %></li>
-	<li><%= link_to "SUBMITTED STORIES", pages_submitted_path %></li>
-	<li><%= link_to "SUBMIT A STORY", pages_submit_path %></li>
+<style>
+	/*Drop Down Menu Styles*/
+	#ddmenu {
+		margin: 0;
+		padding: 0;
+		height:43px;
+	}
+	
+	#ddmenu li {	
+		float: left;
+		list-style: none;
+		margin-right:5px;
+	}
+
+	#ddmenu li a {	
+		display: block;
+		padding: 2px 20px;
+		text-decoration: none;
+		color: #000000;
+		text-transform:uppercase;
+		white-space: nowrap;
+		text-align:center;
+	}
+
+	#ddmenu li a:hover {	
+		color: #777777;
+	}
+	
+	#ddmenu li ul {	
+		margin-bottom:10px;
+		padding: 0;
+		position: absolute;
+		visibility: hidden;
+	}
+
+	#ddmenu li ul li {	
+		display:inline;
+	}
+
+	#ddmenu li ul li a {
+		width: auto;	
+		display: inline;
+		color: #000000; 
+		padding: 2px 20px;
+	}
+
+	#ddmenu li ul li a:hover {	
+		padding: 2px 20px;
+	}
+	
+	#nav-bg {
+		height: 19px;
+		background: url("/assets/dropDownBar.png") left no-repeat;
+		width:100%;
+		margin-top:-24px;
+		visibility: hidden;
+	}
+</style>
+
+
+<script type="text/javascript">
+// <![CDATA[							
+	var timeout    = 700;
+	var closetimer = 0;
+	var ddmenuitem = 0;
+	
+	function ddmenu_open(){
+		ddmenu_canceltimer();
+	   	ddmenu_close();
+	   	ddmenuitem = $(this).children('ul').css('visibility', 'visible');
+		$("#nav-bg").css('visibility', 'visible');		
+	}
+	
+	function ddmenu_close(){ 
+		if(ddmenuitem) { 
+			ddmenuitem.css('visibility', 'hidden');
+			$("#nav-bg").css('visibility', 'hidden');					
+		}
+	}
+	
+	function ddmenu_timer(){
+		closetimer = window.setTimeout(ddmenu_close, timeout);
+	}
+	
+	function ddmenu_canceltimer(){  
+		if(closetimer){  
+			window.clearTimeout(closetimer);
+	        closetimer = null;
+	}}
+	
+		
+	$(document).ready(function(){  
+		$('#ddmenu > li.with-sub').bind('mouseover', ddmenu_open);
+	    $('#ddmenu > li.with-sub').bind('mouseout',  ddmenu_timer);
+	});
+	
+	document.onclick = ddmenu_close;
+// ]]>  
+</script>
+
+
+<nav>
+	<ul id="ddmenu">
+		<li><%= link_to "HOME", root_path %></li>
+		<li><%= link_to "SHOP", "http://shop.tadashishoji.com", :target => 'blank' %></li>
+		<li class="with-sub">
+			<a href="#">COLLECTION</a>
+			<ul>
+				<li><%= link_to "- SS 2013 RUNWAY", "#" %></li>
+				<li><%= link_to "- SS 2013 COLLECTION", "#" %></li>
+				<li><%= link_to "- FW 2012 RUNWAY", "#" %></li>
+				<li><%= link_to "- FW 2012 COLLECTION", "#" %></li>
+			</ul>	
+		</li>
+		<li><%= link_to "WORLD OF TADASHI", "http://blog.tadashishoji.com", :target => 'blank'  %></li>
+	</ul>
+	<div id="nav-bg">
+		
+	</div>	
 </nav>

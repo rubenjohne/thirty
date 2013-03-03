@@ -29,7 +29,7 @@ body {
 }
 
 #nav {
- padding:10px 0 23px;	
+ padding:10px 0;	
  margin:10px 0;
  width:625px;
  border-top:1px solid #777777;
@@ -45,8 +45,27 @@ body {
 
 .container {
 	width:960px;
-	margin:0 auto;
+	margin:30px auto;
+	background-color: #FFFFFF;
 }
+
+/* BEGIN CLEARFIX */
+
+/* For modern browsers */
+.container:before,
+.container:after {
+    content:"";
+    display:table;
+}
+.container:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.container {
+    zoom:1;
+}
+
+/* END CLEARFIX */
 
 #main {
 	width:625px;

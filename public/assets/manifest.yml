@@ -1,7 +1,16 @@
 ---
+Insta.png: Insta-36aa1481b2617c217cb28120b885006a.png
+Pintrest.png: Pintrest-081d49bfe41172c8fecddca4c21a102b.png
+bg.jpg: bg-4cc8d02258fe8a297405823f49f2e7ed.jpg
+facebook.png: facebook-c554f73cf182ce56bb71b2f2eb160c83.png
+logo.png: logo-f3a1c422686290d03002c56e573d7879.png
 logo30.png: logo30-d6d36a0f7af582576c9c1b2688e50b6a.png
+logoBar.png: logoBar-37525cf072eabf4f67612b9ad333091f.png
+menuBar.png: menuBar-0d1de6fee8e0422e0430defcf2e1dee8.png
 nextImgBtn.png: nextImgBtn-18c9e6b9140676fc65332e0cd927f990.png
 prevImgBtn.png: prevImgBtn-8e22ac7c2715312c6960cc29a6a771e3.png
+twitter.png: twitter-51c7273ab0c69d330dc5cc175b26dfb2.png
+youtube.png: youtube-33800171bc4ce8d33cba5638fa427d65.png
 application.js: application-fa07946275e8e7d14f21a366cbafee25.js
-application.css: application-7785bd7c094d960cc347f3579014470f.css
+application.css: application-c1b9fc6f0aac58ce21cf11c2fc5f3d56.css
 jquery.min.map: jquery.min-892e99df8803f2ad7c7eced7016315f5.map

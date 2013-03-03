@@ -10,14 +10,25 @@
 		list-style:none;
 	}
 	
-	ul.admin-links  li {
+	ul.admin-links li {
 		float:left;
 		padding:10px;
 		display:block;
+		
+	}
+	
+	ul.admin-links li a {
+		color:#ed9bbf;
+	}
+	ul.admin-links li a:hover {
+		color:#e22689;
 	}
 </style>
 
 <header>
+	<%= link_to "/" do %>
+		<%= image_tag "logo.png", :class => 'logo'%>
+	<% end %>	
 	<% if signed_in? %>
 		<ul class="admin-links">
 			<li><%= link_to "Sign out", signout_path, :method => :delete, :class => 'signout_link' %><l/i>

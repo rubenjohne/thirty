@@ -7,24 +7,109 @@
   <%= javascript_include_tag "jquery-1.8.1.min" %>
   <%= javascript_include_tag "jquery.cycle2.min" %>
   <%= csrf_meta_tags %>
+  <!--- website styles -->
+  <style type="text/css">
+
+	html, body {
+	    height: 100%;
+	    margin: 0;
+	    padding: 0;
+	}
+	body {
+	    background-attachment: fixed;
+	    background-color: #FFFFFF;
+	    background-image: url("/assets/bg.jpg");
+	    background-position: center top;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	
+	#wrapper {
+	    min-height: 100%;
+	    position: relative;
+	}
+	
+	header {
+	    background: url("/assets/logoBar.png") no-repeat scroll 0 0 transparent;
+	    height: 81px;
+	}
+	
+	header .admin-links {
+	    position: fixed;
+	    right: 5px;
+	    top: 5px;
+	}
+	
+ 	.logo {
+		margin: 18px 15px 15px;
+     }
+
+	nav {
+	    background: url("/assets/menuBar.png") no-repeat scroll 0 0 transparent;
+	    height: 19px;
+	}
+	
+	.container {
+		padding-bottom:50px;
+	}
+	
+	#footer {
+	    height: 37px;
+	    position: absolute;
+		margin-top:10px;
+		overflow:hidden;
+		background-color:#000000;
+		width:100%;
+	}
+	
+	footer .footer-content {
+	    float: right;
+	}
+	
+	footer ul#footer-links {
+	    float: right;
+	    list-style-type: none;
+	    margin-left: 10px;
+	}
+	
+	footer ul#footer-links li {
+	    float: left;
+	    padding: 10px 10px 10px 0;
+	}
+	
+	footer ul#social-links {
+	    float: right;
+	    list-style-type: none;
+	    margin-top: 3px;
+	}
+	
+	footer ul#social-links li {
+	    float: left;
+	}
+		
+  </style>
+	
 </head>
 <body>
-	<%= render 'layouts/header' %>
-	<section id="flash">
-		<% flash.each do |key, value| %>
-			<div class="flash <%= key %>"><%= value %></div>
-		<% end %>
-	</section>		
-	<div class="container">
-		<div id="main">		
-			<%= render 'layouts/logo' %>				
-			<%= render 'layouts/navigation' %>	
-			<%= yield %>
-		</div>
-		<div id="social-feed">
-			<%= render 'layouts/social' %>				
+	<div id="wrapper">
+		<%= render 'layouts/header' %>
+		<%= render 'layouts/navigation' %>		
+		<section id="flash">
+			<% flash.each do |key, value| %>
+				<div class="flash <%= key %>"><%= value %></div>
+			<% end %>
+		</section>		
+		<div class="container">
+			<div id="main">		
+				<%= render 'layouts/logo' %>				
+				<%= render 'layouts/thirty_navigation' %>	
+				<%= yield %>
+			</div>
+			<div id="social-feed">
+				<%= render 'layouts/social' %>				
+			</div>	
 		</div>	
-	</div>	
-	<%= debug(params) if Rails.env.development? %>
+		<%= render 'layouts/footer' %>
+	</div>
 </body>
 </html>
