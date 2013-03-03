@@ -29,10 +29,11 @@ body {
 }
 
 #nav {
- padding:10px 0 18px;	
+ padding:10px 0 23px;	
  margin:10px 0;
  width:625px;
- border-top:1px dotted #777777;
+ border-top:1px solid #777777;
+ border-bottom:1px solid #777777;
 }
 
 #nav li {
