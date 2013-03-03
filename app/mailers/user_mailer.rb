@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   
   def welcome_email(story)
     @story = story
-    mail(:to => story.email_address, :subject => "Thank you for subscribing to our newsletter")
+    mail(:to => story.email_address, :subject => "Thank You for Subscribing to Our Newsletter")
   end
   
   def thank_you(story)
