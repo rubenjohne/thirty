@@ -9,6 +9,7 @@ class Story < ActiveRecord::Base
   scope :submitted, where(:featured => false, :approved => true)
   scope :needs_approval, where(:featured => false, :approved => false)
   scope :active, where(:active => true)
+  scope :subscribers, where(:subscribe => true)
   
   has_attached_file :picture, styles: {
     thumb: "115x155>",

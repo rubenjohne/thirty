@@ -51,6 +51,11 @@ class StoriesController < ApplicationController
     render :action => "index"
   end
   
+  def subscribers
+    @stories = Story.subscribers 
+  end
+  
+  
   def destroy
     @story = Story.find(params[:id])
     @story.destroy

@@ -14,6 +14,7 @@ class PagesController < ApplicationController
     @stories = Story.submitted
   end
   
+
   def story
     @stories = Story.featured
     @active_stories = Story.active    

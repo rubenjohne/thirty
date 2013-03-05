@@ -1,0 +1,26 @@
+<table>
+	<tr>
+		<th>Picture</th>
+		<th>Anecdote</th>
+		<th>Name</th>
+		<th>E-Mail</th>
+		<th>Address</th>
+		<th>Approved</th>
+		<th>Subscribed</th>
+	</tr>	
+	
+	<% @stories.each do |story| %>
+		<tr>
+			<td><%= image_tag story.picture.url(:thumb), :title => "title", :class => "thumb" %></td>
+			<td><%= story.anecdote.html_safe %></td>
+			<td><%= story.name %></td>
+			<td><%= story.company %></td>
+			<td><%= story.email_address %></td>
+			<td><%= story.approved %></td>
+			<td><%= story.subscribe %></td>
+			<td><%= link_to 'Show', story_path(story) %></td>
+			<td><%= link_to 'Edit', edit_story_path(story) %></td>
+			<td><%= button_to 'Destroy', story_path(story), :data => { :confirm => 'Are you sure?' }, :method => :delete  %></td>
+		</tr>	
+	<% end %>
+</table>
