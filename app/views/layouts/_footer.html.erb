@@ -1,8 +1,70 @@
 <style type="text/css">
 
+	.submit {
+		background: url("/assets/submitArrow_idle.png") no-repeat scroll 0 0 transparent;	
+		text-indent:-9999px;
+		width:30px;
+		height:30px;
+	}
+	
 	.submit:hover {
+		background: url("/assets/submitArrow_hover.png") no-repeat scroll 0 0 transparent;	
 		color:#FFFFFF !important;
 	}
+	
+	ul#social-links
+	{
+		list-style-type: none;
+		float: right;
+		margin-top: 3px;
+	}	
+	
+	ul#social-links li
+	{
+		float:left;
+	}
+	
+	ul#social-links li a
+	{
+		text-indent:-9999px;
+		width:30px;
+		height:30px;
+		display:inline-block;
+	}
+	
+	ul#social-links li .twitter-link {
+		background: url("/assets/twitter_idle.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	ul#social-links li .facebook-link {
+		background: url("/assets/facebook_idle.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	ul#social-links li .pinterest-link {
+		background: url("/assets/pinterest_idle.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	ul#social-links li .instagram-link {
+		background: url("/assets/insta_idle.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	ul#social-links li .twitter-link:hover {
+		background: url("/assets/twitter_hover.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	ul#social-links li .facebook-link:hover {
+		background: url("/assets/facebook_hover.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	ul#social-links li .pinterest-link:hover {
+		background: url("/assets/pinterest_hover.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	ul#social-links li .instagram-link:hover {
+		background: url("/assets/insta_hover.png") no-repeat scroll 0 0 transparent;
+	}
+	
+	
 	
 </style>
 
@@ -10,10 +72,10 @@
 	<div class="footer-content">
 		<ul id="footer-links">
 			<li>
-				<form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post" class="clearfix" style="margin-top:-4px;">
+				<form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post" class="clearfix" style="margin-top:-5px;">
 
 				    <div align="center">
-					    <input type="text" name="ea" size="20" value="JOIN OUR MAILING LIST" onclick="this.value='';" style="font-size:11px; border:0px solid #ffffff; color:#ffffff;background-color:#555555;padding-left:2px;">
+					    <input type="text" name="ea" size="20" value="JOIN OUR MAILING LIST" onclick="this.value='';" style="font-size:11px; border:0px solid #ffffff; color:#ffffff;background-color:#555555;padding-left:2px;padding-top:5px">
 					    <input type="submit" name="go" value="SUBSCRIBE" class="submit"  style="font-size:12px; background-color:#000000; color:#777777; border:none;padding-right:0">
 					    <input type="hidden" name="llr" value="6mpiveeab">
 					    <input type="hidden" name="m" value="1103621683206">
@@ -22,13 +84,14 @@
 				</form>
 			</li>
 			<li><%= link_to "WHOLESALE", "http://catalog.tadashishoji.com", :target => 'blank' %></li>
-			<li><%= link_to "PRIVACY POLICY", "#"  %></li>
+			<li><%= link_to "PRIVACY POLICY", "http://www.tadashishoji.com/pages/privacy"  %></li>
+			<li><%= link_to "CONTACT US", "http://www.tadashishoji.com/pages/contact"  %></li>
 		</ul>	
 		<ul id="social-links">
-			<li><%= link_to image_tag("twitter.png"), "http://twitter.com/TadashiShoji", :target => 'blank' %></li>
-			<li><%= link_to image_tag("facebook.png"), "http://www.facebook.com/tadashishoji",  :target => 'blank'  %></li>		
-			<li><%= link_to image_tag("Pintrest.png"), "http://pinterest.com/tadashishoji/", :target => 'blank' %></li>
-			<li><%= link_to image_tag("Insta.png"), "http://instagram.com/tadashishoji/",  :target => 'blank'  %></li>		
+			<li><%= link_to "twitter", "http://twitter.com/TadashiShoji", :target => 'blank', :class => "twitter-link" %></li>
+			<li><%= link_to "facebook", "http://www.facebook.com/tadashishoji",  :target => 'blank', :class => "facebook-link"  %></li>		
+			<li><%= link_to "pinterest", "http://pinterest.com/tadashishoji/", :target => 'blank', :class => "pinterest-link" %></li>
+			<li><%= link_to "instagram", "http://instagram.com/tadashishoji/",  :target => 'blank', :class => "instagram-link"  %></li>		
 		</ul>	
 	</div>	
 </footer>	

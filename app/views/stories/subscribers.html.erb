@@ -20,7 +20,6 @@
 			<td><%= story.subscribe %></td>
 			<td><%= link_to 'Show', story_path(story) %></td>
 			<td><%= link_to 'Edit', edit_story_path(story) %></td>
-			<td><%= button_to 'Destroy', story_path(story), :data => { :confirm => 'Are you sure?' }, :method => :delete  %></td>
-		</tr>	
+			</tr>	
 	<% end %>
 </table>
