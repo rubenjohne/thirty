@@ -43,6 +43,14 @@ body {
 	text-align:center;
 }
 
+#nav li a {
+	padding:10px;
+}
+
+#nav li a:hover {
+	border-bottom:3px solid #8d775a;
+}
+
 .container {
 	width:960px;
 	margin:30px auto;
