@@ -22,6 +22,9 @@
 		display:block;
 	}	
 	
+	#thank-you .thanks-signature {
+		margin-top:10px;
+	}
 </style>
 
 <%= render :partial => 'carousel_story', :locals => {:stories => @featured_stories} %>
@@ -31,7 +34,7 @@
 	<h1 class="thank-you-title">THANK YOU!</h1>
 	<p>Your submission has been received.</p> 
 	<p>We will send an email as soon as your story is live.</p>
-	<p>Sincerely,</p> 
+	<p class="thanks-signature">Sincerely,</p> 
 	<p>Tadashi Shoji</p>
 
 	<div id="thank-you-links">

@@ -8,6 +8,7 @@
 		font-size: 32px;
 		margin:10px 0;
 		color: #8d775a;
+		font-family:'Didot';
 	}
 	
 	h1.submit-title .emphasize {
@@ -23,6 +24,11 @@
 		margin:10px 0;
 		padding:10px 0;
 		text-align:center;
+	}
+	
+	#story_picture {
+		border: 1px solid #E5E0DA;
+		background-image:url("/assets/widgetLine.gif");
 	}
 	
 	#submit textarea {
@@ -95,9 +101,11 @@
 	/*  mailing address */
 	
 	#mailing-address {
-		width:300px;
+		width:299px;
 		float:left;
-		margin-left:25px;
+		margin-left:15px;
+		padding-left:10px;
+		border-left:1px solid #E5E0DA;
 	}
 	
 	
@@ -152,10 +160,11 @@
 	
 	input, textarea {
 		background-color:#e5e0da;
+		border:none;
 	}
 	
 	.thank-you-submit {
-		font-style:'Didot';
+		font-family:'Didot';
 		font-size:30px;
 		color:#8d775a;
 		text-align:center;
@@ -176,7 +185,7 @@
 <div id="submit">
 
 	<h1 class="submit-title">SUBMIT <span class="emphasize">YOUR</span> STORY</h1>
-	<h4 class="sub-title">We’d love to hear your memories in Tadashi Shoji. Join the celebration and share your story!</h4>
+	<h4 class="sub-title">We’d love to hear your memories in Tadashi Shoji. <br/>Join the celebration and share your story!</h4>
 
 
 	<%= form_for(:story, :url => pages_create_path) do |f| %>
