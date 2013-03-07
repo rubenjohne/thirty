@@ -67,7 +67,7 @@
     <a href="#" id="prev">prev</a>
     <a href="#" id="next">next</a>
 
-	<% @stories.each do |story| %>
+	<% stories.each do |story| %>
 		<% unless story.active? %>
 			<%= image_tag story.black_and_white.url, :title => "#{story.name}",  :size => "115x115", :class => "carousel-image" %>
 		<% else %>
