@@ -16,9 +16,18 @@ class PagesController < ApplicationController
   
 
   def story
-    @stories = Story.featured
-    @active_stories = Story.active    
-    @story = Story.find(params[:id])
+    # this is for the carousel menu on top
+    if Story.exists?(params[:id])    
+      @story = Story.find(params[:id])
+      if @story.active 
+        @stories = Story.featured
+        @active_stories = Story.active
+      else 
+        redirect_to root_path
+      end        
+    else 
+      redirect_to root_path
+    end   
   end
   
   
