@@ -8,4 +8,4 @@
 		:controller => "pages", :action => "story", :id => story.id  %>
 <% end %>
 <p><%= story.name %></p>
-<p><%= story.company %></p>
+<p><%= story.company.html_safe %></p>
