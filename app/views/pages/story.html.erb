@@ -72,7 +72,9 @@
 		<%= image_tag @story.picture.url(:regular), :title => "#{@story.name}", :class => "story_image" %>
 	</div>	
 	<div id="story-view-details">
+		<!--- remove this 
 		<h1 class="story-view-name"><%= @story.name %></h1>
+		-->
 		<div class="story-view-about"><%= @story.about_me.html_safe %></div>
 		<div class="story-view-story"><%= @story.anecdote.html_safe %></div>
 		<!--- Add this social buttons -->
