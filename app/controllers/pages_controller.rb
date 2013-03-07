@@ -8,10 +8,12 @@ class PagesController < ApplicationController
   
   def submit
     @story = Story.new
+    @featured_stories = Story.featured    
   end
   
   def submitted
     @stories = Story.submitted
+    @featured_stories = Story.featured  
   end
   
 
@@ -20,7 +22,7 @@ class PagesController < ApplicationController
     if Story.exists?(params[:id])    
       @story = Story.find(params[:id])
       if @story.active 
-        @stories = Story.featured
+        @featured_stories = Story.featured
         @active_stories = Story.active
       else 
         redirect_to root_path
@@ -51,7 +53,7 @@ class PagesController < ApplicationController
   
   
   def thanks
-    
+    @featured_stories = Story.featured
   end
   
   def testemail

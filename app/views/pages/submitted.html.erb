@@ -5,6 +5,8 @@
 	}
 </style>
 
+<%= render :partial => 'carousel_story', :locals => {:stories => @featured_stories} %>
+
 <div class="stories">
 	<% @stories.each_with_index do |story, index = 1| %>
 		<% true_index = index + 1 %>
