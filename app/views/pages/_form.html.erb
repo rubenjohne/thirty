@@ -12,7 +12,7 @@
 	<tr>
 		<th colspan="2">
 			YOUR STORY * <br/>
-		It is a statement of blended celebration and sentiments, happiness and humor.<br/> Feel free to include a personal touch (favorite memory, joke, or special secret).
+		<span class="story-description">It is a statement of blended celebration and sentiments, happiness and humor.<br/> Feel free to include a personal touch (favorite memory, joke, or special secret).</span>
 		</th>
 	</tr>	
 	<tr>
@@ -24,6 +24,11 @@
 
 <div id="customer-info">
 	<table id="table-customer-info">
+		<tr>
+			<td colspan="2" style="padding:10px 0;font-size:11px;text-align:center">
+				The following information will remain confidential and will not be published with your story.
+			</td>
+		</tr>			
 		<tr>
 			<th colspan="2">FIRST NAME *</th>
 		</tr>	
@@ -44,6 +49,9 @@
 		</tr>	
 		<tr>
 			<td colspan="2"><%= f.text_field :email_address, :class => "text_field" %></td>
+		</tr>	
+		<tr>
+			<td colspan="2" style="font-size:11px">Always have the first word on Tadashi Shoji news, runway and trend reports, and special promotion. Received exclusive e-mail updates to the world of Tadashi Shoji.</td>
 		</tr>		
 		<tr id="customer-subscribe">
 			<td class="notes">* Required Fields	</td> 
@@ -52,7 +60,7 @@
 		<tr class="spacer"></tr>	
 		<tr>
 			<td></td>
-			<td><%= link_to "PRIVACY POLICY", "http://www.tadashishoji.com/pages/privacy" %></td>
+			<td></td>
 		</tr>	
 	</table>	
 </div>	
@@ -64,9 +72,9 @@
 			<th colspan="2" style="text-align:center;"><span class="thank-you-submit">THANK YOU</span></th>
 		</tr>	
 		<tr>
-			<td style="padding:10px 0;">
+			<td style="padding:10px 0;font-size:11px;text-align:center" >
 				As a small token of our appreciation, each author will be presented with 
-				an exclusive 30th anniversary sketch signed by Tadashi.
+				a Tadashi Shoji tote bag.
 			</td>
 		</tr>	
 		<tr>

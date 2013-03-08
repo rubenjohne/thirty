@@ -3,10 +3,25 @@
 		color:#8d775a;
 		border-bottom:3px solid #8d775a;
 	}
+	
+	#submit-message {
+		text-align:center;
+	}
+	
+	#submit-message p {
+		margin-bottom:20px;
+	}
+	
+	#submit-message p a {
+		font-style:italic;
+	}
 </style>
 
-<%= render :partial => 'carousel_story', :locals => {:stories => @featured_stories} %>
-
+<div id="submit-message">
+	<p>It has been our privilege to dress you. We're honored that Tadashi Shoji has been with you to mark this special moments in your life.</p>
+	<p>We'd love to hear from you! <%= link_to "Submit Your Story", pages_submit_path %></p>
+</div>	
+<hr/>
 <div class="stories">
 	<% @stories.each_with_index do |story, index = 1| %>
 		<% true_index = index + 1 %>

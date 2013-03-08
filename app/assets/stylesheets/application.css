@@ -75,6 +75,12 @@ body {
 
 /* END CLEARFIX */
 
+hr {
+	color:#777777;
+	margin-top:14px;
+}
+
+
 #main {
 	width:625px;
 	float:left;

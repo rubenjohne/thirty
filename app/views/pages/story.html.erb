@@ -59,6 +59,20 @@
 		margin-top:40px;
 		margin-bottom:15px;
 	}
+	
+	<% if @story.featured? %>
+		#featured_link {
+			color:#8d775a;
+			border-bottom:3px solid #8d775a;
+		}
+	<% else %>
+		#submitted_link {
+			color:#8d775a;
+			border-bottom:3px solid #8d775a;
+		}	
+	<% end %>	
+	
+	
 </style>
 
 <%= render :partial => 'preload_active_stories', :locals => {:active_stories => @active_stories } %>
@@ -80,7 +94,7 @@
 		<!--- Add this social buttons -->
 		<%= render :partial => '_add_this_buttons', :locals => {:story => @story} %>
 		<div class="story-view-buttons">
-			<%= link_to "BACK TO STORIES", @back_link, :class => "back-to-link" %>
+			<%= link_to "BACK", @back_link, :class => "back-to-link" %>
 			<%= link_to "SUBMIT YOUR STORY", pages_submit_path, :class => "submit-link" %>
 		</div>		
 	</div>	

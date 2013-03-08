@@ -13,7 +13,6 @@ class PagesController < ApplicationController
   
   def submitted
     @stories = Story.submitted
-    @featured_stories = Story.featured  
   end
   
 
