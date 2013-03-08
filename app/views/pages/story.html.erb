@@ -80,7 +80,7 @@
 		<!--- Add this social buttons -->
 		<%= render :partial => '_add_this_buttons', :locals => {:story => @story} %>
 		<div class="story-view-buttons">
-			<%= link_to "BACK TO STORIES", root_path, :class => "back-to-link" %>
+			<%= link_to "BACK TO STORIES", @back_link, :class => "back-to-link" %>
 			<%= link_to "SUBMIT YOUR STORY", pages_submit_path, :class => "submit-link" %>
 		</div>		
 	</div>	

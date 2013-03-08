@@ -6,7 +6,7 @@ class Story < ActiveRecord::Base
   
   
   scope :featured, where(:featured => true).order('participant_number ASC')
-  scope :submitted, where(:featured => false, :approved => true)
+  scope :submitted, where(:featured => false, :approved => true).order('updated_at DESC')
   scope :needs_approval, where(:featured => false, :approved => false)
   scope :active, where(:active => true)
   scope :subscribers, where(:subscribe => true)

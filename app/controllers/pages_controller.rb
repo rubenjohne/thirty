@@ -22,6 +22,12 @@ class PagesController < ApplicationController
     if Story.exists?(params[:id])    
       @story = Story.find(params[:id])
       if @story.active 
+        # check if this is a submitted story or a featured story to setup the back link 
+        if @story.featured?
+          @back_link = root_path
+        else
+          @back_link = pages_submitted_path  
+        end  
         @featured_stories = Story.featured
         @active_stories = Story.active
       else 
